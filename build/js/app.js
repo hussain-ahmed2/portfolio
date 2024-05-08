@@ -1,5 +1,6 @@
 const navTogglerBtn = document.getElementById('nav-toggler');
 const navItemsForMobile = document.getElementById('nav-items-for-mobile');
+const navLink = document.getElementsByClassName('nav-link');
 
 let mobileNavbarIsActive = false;
 const navToggleFunction = () => {
@@ -25,3 +26,11 @@ const navToggleFunction = () => {
 
 navTogglerBtn.addEventListener('click', navToggleFunction);
 navItemsForMobile.addEventListener('click', navToggleFunction);
+
+for(let i=0; i<navLink.length; i++){
+  navLink[i].addEventListener('click',function(){
+    const current = document.getElementsByClassName('active');
+    current[0].classList.remove('active');
+    this.classList.add('active');
+  })
+}
