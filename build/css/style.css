@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+ 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+html {
+   scroll-padding-top: 50px;
+   scroll-behavior: smooth;
+}
+
+/*navbar*/
+
+#navbar {
+	width: 100vw;
+	height: 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 100px;
+	background-color: #fffe;
+	color: LimeGreen;
+	box-shadow: 0 0 5px LimeGreen;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+}
+
+#nav-title {
+	font-size: 28px;
+	font-weight: bold;
+}
+
+#nav-items {
+	display: flex;
+	list-style: none;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+
+#nav-items li a {
+	display: block;
+	text-decoration: none;
+	color: LimeGreen;
+	font-size: 18px;
+	padding: 14px 16px;
+}
+
+#nav-items li a:hover {
+	transform: scale(1.2);
+}
+
+#nav-items li a:hover:after {
+	content: '';
+	display: block;
+	height: 2px;
+	background-color: LimeGreen;
+	border-radius: 50%;
+	animation: nav-item-hover 0.4s ease-in;
+}
+
+@keyframes nav-item-hover {
+	from {
+		width: 0;
+	}
+	to {
+		width: 120%;
+	}
+}
+
+#nav-items li a:hover {
+	margin-top: 2px;
+}
+
+
+#nav-items-for-mobile {
+	position: fixed;
+	right: 0;
+	z-index: 1;
+	top: 50px;
+	display: none;
+	flex-direction: column;
+	font-size: 20px;
+	padding: 20px 0;
+	width: 50%;
+	height: calc(100vh - 50px);
+	list-style: none;
+	background-color: #fffe;
+	text-align: center;
+	animation: nav-toggle .3s ease-in-out;
+	box-shadow: 0 5px 5px limegreen;
+	overflow: hidden;
+}
+
+@keyframes nav-toggle {
+	from {
+		width: 0;
+		height: 0;
+		transform: scale(0.5);
+	}
+	to {
+		width: 50%;
+		height: 100vh;
+		transform: scale(1.0);
+	}
+}
+
+#nav-items-for-mobile li a {
+	text-decoration: none;
+	color: limegreen;
+	display: block;
+	padding: 20px 0;
+}
+
+#nav-items-for-mobile li a:hover {
+	background-color: limegreen;
+	color: #fffffffd;
+	transform: scale(1.2);
+}
+
+#nav-toggler {
+	width: 50px;
+	height: 40px;
+	position: relative;
+	cursor: pointer;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+}
+
+#nav-toggler:hover {
+	border-radius: 5px;
+	background-color: limegreen;
+
+	.hamburger-icon {
+		background-color: white;
+	}
+}
+
+.hamburger-icon {
+	height: 5px;
+	width: 40px;
+	background-color: limegreen;
+	border-radius: 5px;
+	transition: 0.3s ease;
+}
+
+@media only screen and (max-width: 768px) {
+	#navbar {
+		padding-right: 10px;
+	}
+
+	#nav-items {
+		display: none;
+	}
+
+	#nav-toggler {
+		display: flex;
+	}
+}
+
+/*hero*/
+
+#hero {
+	height: 100vh;
+	width: 100%;
+	padding-top: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 20px;
+}
+
+img {
+	width: 100%;
+}
+
+#hero-img {
+	width: 50%;
+	display: grid;
+	place-content: center;
+}
+
+#hero-img img {
+	border-radius: 50%;
+	max-width: 300px;
+	box-shadow: 0 0 5px 3px limegreen;
+}
+
+#hero-img img:hover{
+	transform: scale(1.2);
+}
+
+#hero-text {
+	padding: 0 20px;
+	font-size: 24px;
+	color: limegreen;
+}
+
+@keyframes hero-text {
+	0% {
+		opacity: 50%;
+	}
+	50% {
+		opacity: 100%;
+	}
+	100% {
+		opacity: 50%;
+	}
+}
+
+#hero-text:hover {
+	animation: hero-text 1.5s ease infinite;
+}
+
+@media only screen and (max-width: 768px) {
+	#hero {
+		flex-direction: column;
+		gap: 50px;
+	}
+
+	#hero-img {
+		width: 70%;
+	}
+}
+
+.section-divider {
+	display: block;
+	height: 1px;
+	background-color: limegreen;
+	margin: 10px 20px;
+	opacity: 60%;
+}
+
+/* skills */
+
+#skills {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+	min-height: 100vh;
+	padding-top: 80px;
+	position: relative;
+}
+
+#skills-header {
+	position: absolute;
+	top: 0;
+	font-size: 26px;
+	font-weight: 600;
+	color: limegreen;
+	padding: 20px 0;
+}
+
+#skills .skill-title {
+	font-size: 24px;
+}
+
+.html {
+	color: orangered;
+}
+
+.css {
+	color: dodgerblue;
+}
+
+.javascript {
+	color: gold;
+}
+
+.bootstrap {
+	color: blueviolet;
+}
+
+.tailwind {
+	color: darkturquoise;
+}
+
+#skills .skill-img {
+	width: 200px;
+	height: 200px;
+}
+
+.skill-item {
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+	justify-content: space-between;
+	height: 250px;
+	box-shadow: 1px 2px 5px hsl(120, 61%, 65%);
+	border-radius: 5px;
+	padding: 5px;
+	background-color: white;
+	cursor: pointer;
+}
+
+.skill-item:hover {
+	background-color: #eeee;
+}
+
+@media only screen and (max-width: 768px){
+	#skills {
+		gap: 25px;
+	}
+
+	#skills .skill-img {
+		width: 150px;
+		height: 150px;
+	}
+
+	.skill-item {
+		height: 200px;
+	}
+}
