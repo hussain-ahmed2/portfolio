@@ -1,6 +1,10 @@
 const navTogglerBtn = document.getElementById('nav-toggler');
 const navItemsForMobile = document.getElementById('nav-items-for-mobile');
 const navLink = document.getElementsByClassName('nav-link');
+const movNavLink = document.getElementsByClassName('mov-nav-link');
+const projectContainer = document.getElementById('small-projects');
+const year = document.getElementById('date');
+const date = new Date();
 
 let mobileNavbarIsActive = false;
 const navToggleFunction = () => {
@@ -34,3 +38,55 @@ for(let i=0; i<navLink.length; i++){
     this.classList.add('active');
   })
 }
+
+for(let i=0; i<movNavLink.length; i++){
+  movNavLink[i].addEventListener('click',function(){
+    const current = document.getElementsByClassName('active');
+    current[1].classList.remove('active');
+    this.classList.add('active');
+  })
+}
+
+const projectList = [
+  {
+    title: 'Currency Converter',
+    src: './img/currency-converter.png',
+  },
+  {
+    title: 'Basic Calculator',
+    src: './img/basic-calculator.png',
+  },
+  {
+    title: 'Roman Numeral Converter',
+    src: './img/roman-numeral-converter.png',
+  },
+  {
+    title: 'Palindrome Checker',
+    src: './img/palindrome-checker.png',
+  },
+  {
+    title: 'Clock',
+    src: './img/clock.png',
+  },
+  {
+    title: 'Tic Tac Toe',
+    src: './img/tic-tac-toe.png',
+  },
+  {
+    title: 'Uncover Game',
+    src: './img/uncover-small-game.png'
+  }
+];
+
+projectList.map((e) => {
+  const card = `
+    <div class="project-card">
+      <img class="project-img" src="${e.src}" alt="${e.title}">
+      <div class="project-title">${e.title}</div>
+    </div>
+    `;
+  projectContainer.innerHTML += card; 
+
+});
+
+year.innerText = date.getFullYear();
