@@ -90,3 +90,17 @@ projectList.map((e) => {
 });
 
 year.innerText = date.getFullYear();
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    entry.target.classList.toggle('skill-item-show', entry.isIntersecting);
+  })
+}, {
+  rootMargin: '100px'
+})
+
+const skillCard = document.querySelectorAll('.skill-item');
+skillCard.forEach(el => observer.observe(el));
+
+const projectCard = document.querySelectorAll('.project-card');
+projectCard.forEach(el => observer.observe(el));
