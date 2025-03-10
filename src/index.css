@@ -16,7 +16,7 @@
   }
 
   .nav-links-container {
-    @apply flex items-center gap-8 max-md:absolute max-md:top-14 max-md:left-0 max-md:flex-col max-md:w-full max-md:border-b max-md:border-gray-200 dark:max-md:border-gray-700 bg-white/95 dark:bg-gray-900/95 max-md:py-0 max-md:px-0 max-md:gap-0 max-md:text-center max-md:z-50 transition duration-300;
+    @apply flex items-center gap-8 max-md:absolute max-md:top-14 max-md:left-0 max-md:flex-col max-md:w-full max-md:border-b max-md:border-gray-200 dark:max-md:border-gray-700 max-md:bg-white/95 max-md:dark:bg-gray-900/95 max-md:py-0 max-md:px-0 max-md:gap-0 max-md:text-center max-md:z-50 transition duration-300;
   }
 
   .tc {
