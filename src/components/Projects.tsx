@@ -7,16 +7,26 @@ import {
 	Smartphone,
 	ShoppingCart,
 	Briefcase,
+	ChefHat,
 } from "lucide-react";
 
 export function Projects() {
 	const projects = [
 		{
+			title: "RecipeRally - Recipe finder",
+			description:
+				"Discover and explore a variety of recipes with advanced search and filtering options.",
+			tech: ["Laravel", "MySQL", "Tailwind CSS", "Blade"],
+			github: "https://github.com/hussain-ahmed2/recipe-website",
+			live: "#",
+			icon: <ChefHat />,
+		},
+		{
 			title: "Phone Shop E-Commerce",
 			description:
 				"Full-stack mobile marketplace with user auth, product management, and payment integration",
-			tech: ["Laravel", "MySQL", "Tailwind CSS", "Blade", "JavaScript"],
-			github: "#",
+			tech: ["Laravel", "MySQL", "Tailwind CSS", "Blade"],
+			github: "https://github.com/hussain-ahmed2/phone-shop-app",
 			live: "#",
 			icon: <Smartphone />,
 		},
@@ -24,8 +34,8 @@ export function Projects() {
 			title: "Job Portal Platform",
 			description:
 				"Dynamic job board with advanced search, application tracking, and employer dashboards",
-			tech: ["Next.js", "React", "Tailwind CSS", "Node.js", "MongoDB"],
-			github: "#",
+			tech: ["Laravel", "MySQL", "Tailwind CSS", "Blade"],
+			github: "https://github.com/hussain-ahmed2/pixel-positions",
 			live: "#",
 			icon: <Briefcase />,
 		},
@@ -33,30 +43,18 @@ export function Projects() {
 			title: "E-Commerce Application",
 			description:
 				"Modern shopping platform with cart functionality and seamless checkout experience",
-			tech: [
-				"Next.js",
-				"TypeScript",
-				"Stripe",
-				"Tailwind CSS",
-				"Framer Motion",
-			],
-			github: "#",
-			live: "#",
+			tech: ["Next.js", "TypeScript", "Tailwind CSS"],
+			github: "https://github.com/hussain-ahmed2/e-commerce-app",
+			live: "https://e-commerce-shop-by-hussain.netlify.app/",
 			icon: <ShoppingCart />,
 		},
 		{
 			title: "Music Academy Website",
 			description:
 				"Interactive learning platform with course management and video streaming",
-			tech: [
-				"Next.js",
-				"Aceternity UI",
-				"Tailwind CSS",
-				"Shadcn",
-				"React Query",
-			],
-			github: "#",
-			live: "#",
+			tech: ["Next.js", "Aceternity UI", "Tailwind CSS", "Shadcn"],
+			github: "https://github.com/hussain-ahmed2/music-academy",
+			live: "https://music-academy-by-hussain.netlify.app/",
 			icon: <Code />,
 		},
 	];
